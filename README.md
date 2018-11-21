@@ -16,7 +16,8 @@ docker container stats --all [c_name] | Shows container statistics
 docker container inspect --format '{{.NetworkSettings.IPAddress}}' [c_name] | Select a specific node from inspect json
 docker container port proxy | Shows all available ports on the container
 docker network inspect [c_name] | Creates a container specifying network
-
+docker container run -d --name [c_name] --network [n_name] nginx:alpine | Creates a container specifying network by DNS
+docker exec -it [c_name] ping [c2_name] | Tests connection between containers
 
 
 ## Docker Networks Commands
@@ -28,4 +29,4 @@ docker network ls | Lists all the networks
 docker network inspect [n_name] | Shows info about a network in json format
 dokcer network create [n_name] | Creates a new network
 docker network connect [n_name] [c_name] | Adds a new network interface to the container 
-docker network disconnect [n_name] [c_name] | Removes a network interface from the container 
+docker network disconnect [n_name] [c_name] | Removes a network interface from the container
