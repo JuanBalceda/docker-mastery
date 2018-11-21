@@ -18,7 +18,7 @@ docker container port proxy | Shows all available ports on the container
 docker network inspect [c_name] | Creates a container specifying network
 docker container run -d --name [c_name] --network [n_name] nginx:alpine | Creates a container specifying network by DNS
 docker exec -it [c_name] ping [c2_name] | Tests connection between containers
-
+docker run --rm -it centos:7 bash | Creates a new container that will be deleted once is stopped
 
 ## Docker Networks Commands
 Replace [n_name] with network name
