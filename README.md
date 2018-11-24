@@ -27,7 +27,8 @@ Commands | Description
 ---------|------------
 docker image history [i_name] | Show the history of an image
 docker image inspect [i_name] | Display detailed information on one or more images
-
+docker image tag s_image[:tag] t_image[:tag] | Create a tag t_image that refers to s_image
+docker image push [i_name] | Push an image or a repository to a registry
 
 ## Docker Networks Commands
 Replace [n_name] with network name
@@ -39,3 +40,16 @@ docker network inspect [n_name] | Shows info about a network in json format
 dokcer network create [n_name] | Creates a new network
 docker network connect [n_name] [c_name] | Adds a new network interface to the container 
 docker network disconnect [n_name] [c_name] | Removes a network interface from the container
+
+## Docker Security Commands
+
+Commands | Description
+---------|------------
+docker login | Log in to a Docker registry
+
+## Notes
+* latest tag not always means latest, it's the default tag.
+* Showing user info:
+```bash
+ cat .docker/config.json
+ ```
