@@ -20,6 +20,15 @@ docker container run -d --name [c_name] --network [n_name] nginx:alpine | Create
 docker exec -it [c_name] ping [c2_name] | Tests connection between containers
 docker run --rm -it centos:7 bash | Creates a new container that will be deleted once is stopped
 
+## Docker Image Commands
+Replace [i_name] with image name or sha
+
+Commands | Description
+---------|------------
+docker image history [i_name] | Show the history of an image
+docker image inspect [i_name] | Display detailed information on one or more images
+
+
 ## Docker Networks Commands
 Replace [n_name] with network name
 
